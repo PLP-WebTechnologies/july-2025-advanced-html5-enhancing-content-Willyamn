@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced HTML5 Form Example</title>
+  <meta name="description" content="A demonstration page using lists, tables, media, and a fully functional HTML5 form with validation.">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to Tech Conference 2025</h1>
+    <p>Your one-stop hub for the latest in technology, networking, and innovation.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#registration">Registration Form</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Section: Highlights (Lists) -->
+    <section id="highlights" aria-labelledby="highlights-heading">
+      <h2 id="highlights-heading">Conference Highlights</h2>
+      <p>Here are some of the exciting opportunities you’ll enjoy:</p>
+      <ul>
+        <li>Keynote speeches by industry leaders</li>
+        <li>Hands-on workshops and coding sessions</li>
+        <li>Networking with professionals and startups</li>
+        <li>Exhibition of latest tech products</li>
+      </ul>
+      <p>What you’ll learn:</p>
+      <ol>
+        <li>Emerging trends in AI and Robotics</li>
+        <li>Advancements in Cybersecurity</li>
+        <li>Green Technology Innovations</li>
+      </ol>
+    </section>
+
+    <!-- Section: Schedule (Table) -->
+    <section id="schedule" aria-labelledby="schedule-heading">
+      <h2 id="schedule-heading">Event Schedule</h2>
+      <table border="1" aria-describedby="schedule-heading">
+        <caption>Conference Day 1 Schedule</caption>
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Session</th>
+            <th scope="col">Speaker</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>09:00 AM</td>
+            <td>Opening Keynote</td>
+            <td>Dr. Jane Doe</td>
+          </tr>
+          <tr>
+            <td>11:00 AM</td>
+            <td>Workshop: Building Secure Apps</td>
+            <td>John Smith</td>
+          </tr>
+          <tr>
+            <td>02:00 PM</td>
+            <td>Panel: Future of Green Tech</td>
+            <td>Industry Experts</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section: Media -->
+    <section id="media" aria-labelledby="media-heading">
+      <h2 id="media-heading">Media</h2>
+      <figure>
+        <img src="techconpic.jpg" alt="Conference venue" width="600" height="300">
+        <figcaption>Our conference hall in Nairobi, Kenya.</figcaption>
+      </figure>
+      <figure>
+        <audio controls>
+          <source src="techaudio.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <figcaption>Listen to last year’s keynote highlights.</figcaption>
+      </figure>
+      <figure>
+  <iframe width="600" height="338" 
+    src="https://www.youtube.com/embed/0x5mf8BUJZY" 
+    title="Smart City Digital City Video"
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
+  <figcaption>A Smart City Digital City Video.</figcaption>
+</figure>
+
+    </section>
+
+    <!-- Section: Registration Form -->
+    <section id="registration" aria-labelledby="registration-heading">
+      <h2 id="registration-heading">Conference Registration Form</h2>
+      <form action="#" method="post" autocomplete="on">
+        
+        <!-- Personal Information -->
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required><br><br>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+254700123456" pattern="^\+?\d{10,15}$" required><br><br>
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required><br><br>
+        </fieldset>
+
+        <!-- Account Details -->
+        <fieldset>
+          <legend>Account Details</legend>
+
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" minlength="5" maxlength="15" placeholder="Choose a username" required><br><br>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" minlength="8" placeholder="Enter a strong password" required><br><br>
+
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" minlength="8" placeholder="Re-enter your password" required><br><br>
+        </fieldset>
+
+        <!-- Preferences -->
+        <fieldset>
+          <legend>Conference Preferences</legend>
+
+          <p>Select your attendance type:</p>
+          <label><input type="radio" name="attendance" value="in-person" required> In-Person</label>
+          <label><input type="radio" name="attendance" value="virtual"> Virtual</label><br><br>
+
+          <p>Choose your areas of interest:</p>
+          <label><input type="checkbox" name="interest" value="AI"> Artificial Intelligence</label>
+          <label><input type="checkbox" name="interest" value="Cybersecurity"> Cybersecurity</label>
+          <label><input type="checkbox" name="interest" value="GreenTech"> Green Technology</label><br><br>
+
+          <label for="country">Country:</label>
+          <select id="country" name="country" required>
+            <option value="">--Select--</option>
+            <option value="Kenya">Kenya</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Other">Other</option>
+          </select><br><br>
+
+          <label for="comments">Additional Comments:</label><br>
+          <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Enter any comments here..."></textarea><br><br>
+
+          <label for="ticket">Ticket ID (readonly example):</label>
+          <input type="text" id="ticket" name="ticket" value="TICKET-2025-001" readonly><br><br>
+        </fieldset>
+
+        <!-- Submit -->
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Tech Conference. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
